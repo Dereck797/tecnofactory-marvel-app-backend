@@ -1,7 +1,7 @@
 const express = require('express');
 const AuthController = require('../controllers/AuthController');
 const UserService = require('../../../domain/services/UserService');
-const UserRepositoryImpl = require('../../../infrastructure/persistence/repositories/UserRepositoryImpl');
+const UserRepositoryImpl = require('../../persistence/repositories/UserRepositoryImpl');
 
 const router = express.Router();
 const userService = new UserService(new UserRepositoryImpl());

@@ -1,6 +1,6 @@
 const express = require('express');
 const ComicController = require('../controllers/ComicController');
-const authMiddleware = require('../middleware/authMiddleware');
+const authMiddleware = require('../middleware/AuthMiddleware');
 
 const router = express.Router();
 const comicController = new ComicController();
