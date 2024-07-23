@@ -3,7 +3,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const authRoutes = require('./infrastructure/http/routes/authRoutes');
-const comicRoutes = require('./infrastructure/http/routes/ComicRoutes');
+const comicRoutes = require('./infrastructure/http/routes/comicRoutes');
 
 dotenv.config();
 
