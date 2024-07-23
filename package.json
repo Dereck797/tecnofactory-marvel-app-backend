@@ -1,0 +1,33 @@
+{
+  "name": "tecnofactory-marvel-app-backend",
+  "version": "1.0.0",
+  "description": "Prueba técnica de ingreso para tecnofactory. Incluye backend para consumo de servicios externos y autenticación de usuarios.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dereck797/tecnofactory-marvel-app-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dereck797/tecnofactory-marvel-app-backend/issues"
+  },
+  "homepage": "https://github.com/Dereck797/tecnofactory-marvel-app-backend#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
