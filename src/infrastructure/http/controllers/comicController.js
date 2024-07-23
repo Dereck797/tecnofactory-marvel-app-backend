@@ -1,4 +1,4 @@
-const MarvelService = require('../../../domain/services/MarvelService');
+const MarvelService = require('../../../domain/services/marvelService');
 const FavoriteComicRepositoryImpl = require('../../persistence/repositories/FavoriteComicRepositoryImpl');
 
 class ComicController {
