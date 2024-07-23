@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const authRoutes = require('./infrastructure/http/routes/AuthRoutes');
+const authRoutes = require('./infrastructure/http/routes/authRoutes');
 const comicRoutes = require('./infrastructure/http/routes/ComicRoutes');
 
 dotenv.config();
