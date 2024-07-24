@@ -27,6 +27,12 @@ El proyecto sigue la arquitectura DDD (Domain Driven Design) que se enfoca en tr
 1. **Domain:** Contiene la lógica del negocio y las reglas de la aplicación.
 2. **Application:** Contiene la lógica de la aplicación, la cual orquesta la lógica del dominio y la interacción con el usuario.
 3. **Infrastructure:** Contiene la implementación de las interfaces del dominio y cualquier tecnología externa.
+### Beneficios de DDD
+
+- **Mejor alineación con el negocio:** Al centrar el diseño en el dominio, el software es más comprensible para los expertos del dominio y puede evolucionar junto con los cambios en el negocio.
+- **Modularidad:** La separación de preocupaciones permite que cada parte del sistema sea desarrollada, testeada y mantenida de manera independiente.
+- **Flexibilidad:** Los cambios en la lógica del negocio no afectan directamente a la infraestructura, lo que permite una mayor adaptabilidad a nuevas tecnologías y requisitos.
+
 
 
 ## Instalación (Solo necesario en caso de agregar nuevas funcionalidades)
