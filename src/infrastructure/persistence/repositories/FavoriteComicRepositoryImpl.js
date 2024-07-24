@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const FavoriteComicRepository = require('../../../domain/repositories/FavoriteComicRepository');
 const FavoriteComicEntity = require('../schemas/FavoriteComicSchema');
 
