@@ -6,8 +6,8 @@ class UserService {
     this.userRepository = userRepository;
   }
 
-  async registerUser(name, email, password) {
-    const user = new User(null, name, email, password);
+  async registerUser(id,name, email, password) {
+    const user = new User(id, name, email, password);
     await this.userRepository.save(user);
     return user;
   }

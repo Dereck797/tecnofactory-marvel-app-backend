@@ -7,10 +7,10 @@ class AuthService {
     this.userService = new UserService(userRepository);
   }
 
-  async registerUser(name, email, password) {
+  async registerUser(id, name, email, password) {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
-    const user = await this.userService.registerUser(name, email, hashedPassword);
+    const user = await this.userService.registerUser(id, name, email, hashedPassword);
     const token = this.generateToken(user.id);
     return { user: this.filterUserData(user), token };
   }

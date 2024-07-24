@@ -4,6 +4,7 @@ const UserEntity = require('../schemas/UserSchema');
 class UserRepositoryImpl extends UserRepository {
   async save(user) {
     const newUser = new UserEntity({
+      id: user.id,
       name: user.name,
       email: user.email,
       password: user.password
