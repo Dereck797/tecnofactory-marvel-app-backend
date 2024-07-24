@@ -171,6 +171,10 @@ Este proyecto es una aplicación backend para gestionar usuarios y cómics de Ma
   ```bash
   curl --location --request DELETE 'http://localhost:5000/api/favorites/12345'   --header 'Authorization: Bearer <TOKEN>'
   ```
+## Uso
+
+El api se encuentra alojada en 'https://railway.app.' No es necesario instalarlo en local. Para visualizarlo, abrir este link e iniciar sesión con gitHub: 'https://railway.app/invite/N1PNhwPvNaW'
+
 
 ## Descripción de la Arquitectura
 
