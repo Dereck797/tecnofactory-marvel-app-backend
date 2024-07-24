@@ -18,7 +18,7 @@ Este proyecto es una aplicación backend para gestionar usuarios y cómics de Ma
 
 ## Uso
 
-El api se encuentra alojada en 'https://railway.app.' **No es necesario instalarlo en local.** Para visualizarlo, abrir este link e iniciar sesión con gitHub: 'https://railway.app/invite/N1PNhwPvNaW'
+El api, se encuentra alojada en 'https://railway.app.' **No es necesario instalarlo en local.** Para visualizarlo, abrir este link e iniciar sesión con gitHub: 'https://railway.app/invite/N1PNhwPvNaW'
 
 ## Descripción de la Arquitectura
 
