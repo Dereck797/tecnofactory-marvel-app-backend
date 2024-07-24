@@ -59,6 +59,7 @@ Este proyecto es una aplicación backend para gestionar usuarios y cómics de Ma
 - Curl:
   ```bash
   curl --location --request POST 'https://tecnofactory-marvel-app-backend-production.up.railway.app/api/auth/register'   --header 'Content-Type: application/json'   --data-raw '{
+    "id" : "1222333232"
     "name": "John Doe",
     "email": "johndoe@example.com",
     "password": "password123"
