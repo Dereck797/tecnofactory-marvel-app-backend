@@ -5,7 +5,7 @@ const FavoriteComicEntity = require('../schemas/FavoriteComicSchema');
 class FavoriteComicRepositoryImpl extends FavoriteComicRepository {
   async save(favoriteComic) {
     const existingFavorite = await FavoriteComicEntity.findOne({
-      userId: mongoose.Types.ObjectId(favoriteComic.userId),
+      userId: new mongoose.Types.ObjectId(favoriteComic.userId),
       comicId: favoriteComic.comicId
     });
 
@@ -13,7 +13,7 @@ class FavoriteComicRepositoryImpl extends FavoriteComicRepository {
       return existingFavorite; 
     }
     const newFavoriteComic = new FavoriteComicEntity({
-      userId: mongoose.Types.ObjectId(favoriteComic.userId),
+      userId: new mongoose.Types.ObjectId(favoriteComic.userId),
       comicId: favoriteComic.comicId,
       title: favoriteComic.title,
       description: favoriteComic.description,
@@ -24,12 +24,12 @@ class FavoriteComicRepositoryImpl extends FavoriteComicRepository {
   }
 
   async findByUserId(userId) {
-    return await FavoriteComicEntity.find({ userId: mongoose.Types.ObjectId(userId) });
+    return await FavoriteComicEntity.find({ userId: new mongoose.Types.ObjectId(userId) });
   }
 
   async deleteByUserIdAndComicId(userId, comicId) {
     return await FavoriteComicEntity.findOneAndDelete({
-      userId: mongoose.Types.ObjectId(userId),
+      userId: new mongoose.Types.ObjectId(userId),
       comicId
     });
   }
