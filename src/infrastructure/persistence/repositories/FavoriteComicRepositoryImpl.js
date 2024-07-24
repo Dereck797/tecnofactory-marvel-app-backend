@@ -25,6 +25,10 @@ class FavoriteComicRepositoryImpl extends FavoriteComicRepository {
   async findByUserId(userId) {
     return await FavoriteComicEntity.find({ userId });
   }
+
+  async deleteByUserIdAndComicId(userId, comicId) {
+    return await FavoriteComicEntity.findOneAndDelete({ userId, comicId });
+  }
 }
 
 module.exports = FavoriteComicRepositoryImpl;

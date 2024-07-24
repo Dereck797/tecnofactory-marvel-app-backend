@@ -50,6 +50,24 @@ class ComicController {
       res.status(500).json({ error: error.message });
     }
   }
+
+  async removeFavoriteComic(req, res) {
+    const { comicId } = req.body;
+    const userId = req.userId;
+  
+    try {
+      const deletedComic = await this.favoriteComicRepository.deleteByUserIdAndComicId(userId, comicId);
+  
+      if (deletedComic) {
+        res.json({ message: 'Comic removed from favorites' });
+      } else {
+        res.status(404).json({ error: 'Favorite comic not found' });
+      }
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  }
+
 }
 
 module.exports = ComicController;
