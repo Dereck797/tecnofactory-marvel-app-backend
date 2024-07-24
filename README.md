@@ -50,6 +50,7 @@ Este proyecto es una aplicación backend para gestionar usuarios y cómics de Ma
 - Body:
   ```json
   {
+    "id": "1222333232",
     "name": "John Doe",
     "email": "johndoe@example.com",
     "password": "password123"
@@ -57,7 +58,7 @@ Este proyecto es una aplicación backend para gestionar usuarios y cómics de Ma
   ```
 - Curl:
   ```bash
-  curl --location --request POST 'http://localhost:5000/api/auth/register'   --header 'Content-Type: application/json'   --data-raw '{
+  curl --location --request POST 'https://tecnofactory-marvel-app-backend-production.up.railway.app/api/auth/register'   --header 'Content-Type: application/json'   --data-raw '{
     "name": "John Doe",
     "email": "johndoe@example.com",
     "password": "password123"
@@ -77,7 +78,7 @@ Este proyecto es una aplicación backend para gestionar usuarios y cómics de Ma
   ```
 - Curl:
   ```bash
-  curl --location --request POST 'http://localhost:5000/api/auth/login'   --header 'Content-Type: application/json'   --data-raw '{
+  curl --location --request POST 'https://tecnofactory-marvel-app-backend-production.up.railway.app/api/auth/login'   --header 'Content-Type: application/json'   --data-raw '{
     "email": "johndoe@example.com",
     "password": "password123"
   }'
@@ -95,7 +96,7 @@ Este proyecto es una aplicación backend para gestionar usuarios y cómics de Ma
   ```
 - Curl:
   ```bash
-  curl --location --request GET 'http://localhost:5000/api/comics'   --header 'Authorization: Bearer <TOKEN>'
+  curl --location --request GET 'https://tecnofactory-marvel-app-backend-production.up.railway.app/api/comics'   --header 'Authorization: Bearer <TOKEN>'
   ```
 
 ### Obtener detalles de un cómic
@@ -110,7 +111,7 @@ Este proyecto es una aplicación backend para gestionar usuarios y cómics de Ma
   ```
 - Curl:
   ```bash
-  curl --location --request GET 'http://localhost:5000/api/comics/12345'   --header 'Authorization: Bearer <TOKEN>'
+  curl --location --request GET 'https://tecnofactory-marvel-app-backend-production.up.railway.app/api/comics/12345'   --header 'Authorization: Bearer <TOKEN>'
   ```
 
 ### Agregar cómic a favoritos
@@ -134,7 +135,7 @@ Este proyecto es una aplicación backend para gestionar usuarios y cómics de Ma
   ```
 - Curl:
   ```bash
-  curl --location --request POST 'http://localhost:5000/api/favorites'   --header 'Authorization: Bearer <TOKEN>'   --header 'Content-Type: application/json'   --data-raw '{
+  curl --location --request POST 'https://tecnofactory-marvel-app-backend-production.up.railway.app/api/favorites'   --header 'Authorization: Bearer <TOKEN>'   --header 'Content-Type: application/json'   --data-raw '{
     "comicId": "12345",
     "title": "Spider-Man",
     "description": "A great comic.",
@@ -154,7 +155,7 @@ Este proyecto es una aplicación backend para gestionar usuarios y cómics de Ma
   ```
 - Curl:
   ```bash
-  curl --location --request GET 'http://localhost:5000/api/favorites'   --header 'Authorization: Bearer <TOKEN>'
+  curl --location --request GET 'https://tecnofactory-marvel-app-backend-production.up.railway.app/api/favorites'   --header 'Authorization: Bearer <TOKEN>'
   ```
 
 ### Eliminar cómic de favoritos
@@ -169,11 +170,11 @@ Este proyecto es una aplicación backend para gestionar usuarios y cómics de Ma
   ```
 - Curl:
   ```bash
-  curl --location --request DELETE 'http://localhost:5000/api/favorites/12345'   --header 'Authorization: Bearer <TOKEN>'
+  curl --location --request DELETE 'https://tecnofactory-marvel-app-backend-production.up.railway.app/api/favorites/12345'   --header 'Authorization: Bearer <TOKEN>'
   ```
 ## Uso
 
-El api se encuentra alojada en 'https://railway.app.' No es necesario instalarlo en local. Para visualizarlo, abrir este link e iniciar sesión con gitHub: 'https://railway.app/invite/N1PNhwPvNaW'
+El api se encuentra alojada en 'https://railway.app.' **No es necesario instalarlo en local.** Para visualizarlo, abrir este link e iniciar sesión con gitHub: 'https://railway.app/invite/N1PNhwPvNaW'
 
 
 ## Descripción de la Arquitectura
