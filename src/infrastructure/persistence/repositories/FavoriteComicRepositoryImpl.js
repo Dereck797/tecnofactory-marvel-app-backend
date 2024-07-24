@@ -3,6 +3,14 @@ const FavoriteComicEntity = require('../schemas/FavoriteComicSchema');
 
 class FavoriteComicRepositoryImpl extends FavoriteComicRepository {
   async save(favoriteComic) {
+    const existingFavorite = await FavoriteComicEntity.findOne({
+      userId: favoriteComic.userId,
+      comicId: favoriteComic.comicId
+    });
+
+    if (existingFavorite) {
+      return existingFavorite; 
+    }
     const newFavoriteComic = new FavoriteComicEntity({
       userId: favoriteComic.userId,
       comicId: favoriteComic.comicId,

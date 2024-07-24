@@ -28,19 +28,7 @@ class ComicController {
   async addFavoriteComic(req, res) {
     const { comicId, title, description, thumbnail } = req.body;
     const userId = req.userId;
-  
     try {
-      // Verifica si el cómic ya está en favoritos
-      const existingFavorite = await this.favoriteComicRepository.findOne({
-        userId,
-        comicId
-      });
-  
-      if (existingFavorite) {
-        return res.status(200).json({ message: 'Comic already in favorites' });
-      }
-  
-      // Si no existe, lo agrega a favoritos
       const favoriteComic = await this.favoriteComicRepository.save({
         userId,
         comicId,
@@ -48,13 +36,11 @@ class ComicController {
         description,
         thumbnail
       });
-  
       res.json(favoriteComic);
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
   }
-  
 
   async getFavoriteComics(req, res) {
     try {
