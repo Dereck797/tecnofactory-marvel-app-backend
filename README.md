@@ -16,7 +16,20 @@ Este proyecto es una aplicación backend para gestionar usuarios y cómics de Ma
 - MongoDB
 - npm (Node Package Manager)
 
-## Instalación
+## Uso
+
+El api se encuentra alojada en 'https://railway.app.' **No es necesario instalarlo en local.** Para visualizarlo, abrir este link e iniciar sesión con gitHub: 'https://railway.app/invite/N1PNhwPvNaW'
+
+## Descripción de la Arquitectura
+
+El proyecto sigue la arquitectura DDD (Domain Driven Design) que se enfoca en tres capas principales:
+
+1. **Domain:** Contiene la lógica del negocio y las reglas de la aplicación.
+2. **Application:** Contiene la lógica de la aplicación, la cual orquesta la lógica del dominio y la interacción con el usuario.
+3. **Infrastructure:** Contiene la implementación de las interfaces del dominio y cualquier tecnología externa.
+
+
+## Instalación (Solo necesario en caso de agregar nuevas funcionalidades)
 
 1. Clona el repositorio:
    ```bash
@@ -173,15 +186,3 @@ Este proyecto es una aplicación backend para gestionar usuarios y cómics de Ma
   ```bash
   curl --location --request DELETE 'https://tecnofactory-marvel-app-backend-production.up.railway.app/api/favorites/12345'   --header 'Authorization: Bearer <TOKEN>'
   ```
-## Uso
-
-El api se encuentra alojada en 'https://railway.app.' **No es necesario instalarlo en local.** Para visualizarlo, abrir este link e iniciar sesión con gitHub: 'https://railway.app/invite/N1PNhwPvNaW'
-
-
-## Descripción de la Arquitectura
-
-El proyecto sigue la arquitectura DDD (Domain Driven Design) que se enfoca en tres capas principales:
-
-1. **Domain:** Contiene la lógica del negocio y las reglas de la aplicación.
-2. **Application:** Contiene la lógica de la aplicación, la cual orquesta la lógica del dominio y la interacción con el usuario.
-3. **Infrastructure:** Contiene la implementación de las interfaces del dominio y cualquier tecnología externa.
