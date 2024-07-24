@@ -1,4 +1,4 @@
-# Marvel App Backend
+# tecnofactory-marvel-app-backend
 
 Este proyecto es una aplicación backend para gestionar usuarios y cómics de Marvel. La aplicación está construida utilizando Node.js, Express, y MongoDB, y sigue una arquitectura DDD (Domain Driven Design).
 
@@ -21,7 +21,7 @@ Este proyecto es una aplicación backend para gestionar usuarios y cómics de Ma
 1. Clona el repositorio:
    ```bash
    git clone <URL_DEL_REPOSITORIO>
-   cd marvel-app-backend
+   cd tecnofactory-marvel-app-backend
    ```
 2. Instala las dependencias:
    ```bash
