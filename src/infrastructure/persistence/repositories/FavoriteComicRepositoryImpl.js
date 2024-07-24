@@ -23,11 +23,14 @@ class FavoriteComicRepositoryImpl extends FavoriteComicRepository {
   }
 
   async findByUserId(userId) {
-    return await FavoriteComicEntity.find({ userId });
+    return await FavoriteComicEntity.find({ userId: mongoose.Types.ObjectId(userId) });
   }
 
   async deleteByUserIdAndComicId(userId, comicId) {
-    return await FavoriteComicEntity.findOneAndDelete({ userId, comicId });
+    return await FavoriteComicEntity.findOneAndDelete({
+      userId: mongoose.Types.ObjectId(userId),
+      comicId
+    });
   }
 }
 
